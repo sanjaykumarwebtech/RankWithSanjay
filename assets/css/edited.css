@@ -1869,8 +1869,7 @@
   padding: 13px;
   border-radius: 10px;
   border: 0;
-  filter: invert(67%) sepia(77%) saturate(1858%) hue-rotate(41deg)
-    brightness(102%) contrast(104%);
+  filter: invert(77%) sepia(43%) saturate(512%) hue-rotate(131deg) brightness(95%) contrast(93%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -3133,8 +3132,7 @@ form.whatsapp-form {
   margin-bottom: 0;
   padding: 3px;
   transition: all 0.4s ease-out 0s;
-  filter: invert(67%) sepia(77%) saturate(1858%) hue-rotate(41deg)
-    brightness(102%) contrast(104%);
+  filter: invert(77%) sepia(43%) saturate(512%) hue-rotate(131deg) brightness(95%) contrast(93%);
 }
 
 .about-append .icon-box:hover img {
@@ -3651,7 +3649,8 @@ form.whatsapp-form {
 }
 
 .boxes-hero .icon img {
- 
+  
+  filter: invert(77%) sepia(43%) saturate(512%) hue-rotate(131deg) brightness(95%) contrast(93%);
   transition: all 0.3s ease-in-out;
 }
 
