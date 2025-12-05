@@ -51,6 +51,11 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/edited.css" rel="stylesheet">
+<script>
+document.querySelector('.mobile-nav-toggle').onclick = function () {
+    document.body.classList.toggle('mobile-nav-active');
+}
+</script>
 
 
 </head>
@@ -101,6 +106,7 @@
           </ul>
         </div>
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       </div>
     </header><!-- End Header -->
@@ -651,5 +657,6 @@
   </script>   -->
 
 </body>
+
 
 </html>
