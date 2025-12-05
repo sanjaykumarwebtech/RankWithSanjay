@@ -287,7 +287,16 @@ section {
 .header {
   z-index: 997;
   height: 70px;
-  background-color: #000;
+  /* background-color: #f0f7f7; */
+
+    background: linear-gradient(135deg, rgba(240,247,247,0.45), rgba(170,225,225,0.20));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(187, 175, 175, 0.959);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    /* border-radius: 45px; */
+ color: #d5d5d5;
+
 }
 
 .header.sticked {
@@ -299,7 +308,8 @@ section {
 }
 
 .header .logo img {
-  max-height: 30px;
+  max-height: 100px;
+  width: auto;
   margin-right: 1px;
 }
 
