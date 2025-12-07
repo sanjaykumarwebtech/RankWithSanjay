@@ -1,4 +1,10 @@
+
 User-agent: *
 Allow: /
+
+
+User-agent: *
+Disallow: /RankWithSanjay/
+
 
 Sitemap: https://www.rankwithsanjay.tech/sitemap.xml
