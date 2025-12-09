@@ -170,3 +170,18 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
   e.preventDefault();
   document.getElementById("newsletterStatus").innerText = "✅ Subscribed successfully!";
 });
+
+
+
+// Simple animation effect
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".float-card");
+
+  cards.forEach((card, i) => {
+    card.style.transform = "scale(0.9)";
+    setTimeout(() => {
+      card.style.transform = "scale(1)";
+      card.style.transition = "0.5s ease";
+    }, 300 * i);
+  });
+});
