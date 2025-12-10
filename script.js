@@ -173,6 +173,29 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
 
 
 
+const serviceCards = document.querySelectorAll(".service-card");
+
+const oubserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.transform = "translateY(0)";
+      entry.target.style.opacity = "1";
+    }
+  });
+});
+
+serviceCards.forEach(card => {
+  card.style.transform = "translateY(30px)";
+  card.style.opacity = "0";
+  card.style.transition = "0.6s ease";
+  observer.observe(card);
+});
+
+
+
+
+
+
 // Simple animation effect
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".float-card");
@@ -185,3 +208,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300 * i);
   });
 });
+
+
+
+
+const whyItems = document.querySelectorAll('.why-item');
+
+const whyOobserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+whyItems.forEach(item => {
+  item.style.opacity = "0";
+  item.style.transform = "translateY(30px)";
+  item.style.transition = "0.6s ease";
+  whyObserver.observe(item);
+});
+
+
