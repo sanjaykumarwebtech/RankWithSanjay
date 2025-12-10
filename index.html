@@ -78,7 +78,7 @@ document.querySelector('.mobile-nav-toggle').onclick = function () {
   <div class="nav-container">
 
     <!-- Logo -->
-    <div class="logo">Rankwithsanjay<span></span></div>
+    <div class="logo"><img src="large-Photoroom.png" alt="" width="300px"><span></span></div>
 
     <!-- Mobile Menu Button -->
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
@@ -314,90 +314,64 @@ document.querySelector('.mobile-nav-toggle').onclick = function () {
 
 
 
-
-
-
-
-
-<section class="trusted-section">
-  <h2>Trusted by 1000+ Global Companies</h2>
-
-  <div class="logo-marquee">
-    <div class="logo-track">
-
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg" alt="Meta">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-
-      <!-- Duplicate for smooth infinite scroll -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg" alt="Meta">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-
+<section class="testimonials-section" id="reviews">
+  <div class="testimonials-header">
+    <div class="google-rating">
+      Google Rating
+      <div class="stars">⭐⭐⭐⭐⭐ <span class="score">5.0</span> <span class="count">(55)</span></div>
     </div>
+    <a href="#" class="write-review-btn">Write a review</a>
+  </div>
+
+  <div class="testimonial-slider" aria-label="Testimonials carousel">
+    <button class="slider-btn" id="prevBtn" aria-label="Previous">‹</button>
+
+    <div class="testimonial-track" id="sliderTrack" role="list">
+      <!-- Sample card -->
+      <article class="testimonial-card" role="listitem">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>I feel so empowered whenever I come to the gym. Great environment and support.</p>
+        <div class="user-info">
+          <div class="avatar">M</div>
+          <div><strong>Mikhail J.</strong><br><small>4 months ago</small></div>
+        </div>
+      </article>
+
+      <article class="testimonial-card" role="listitem">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>A really great gym with awesome instructors who are always supportive.</p>
+        <div class="user-info">
+          <div class="avatar red">M</div>
+          <div><strong>Melanie G.</strong><br><small>6 months ago</small></div>
+        </div>
+      </article>
+
+      <article class="testimonial-card" role="listitem">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>I started the winter warrior challenge and it has been amazing so far.</p>
+        <div class="user-info">
+          <div class="avatar purple">H</div>
+          <div><strong>Hayley S.</strong><br><small>11 months ago</small></div>
+        </div>
+      </article>
+
+      <article class="testimonial-card" role="listitem">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Great training with the best trainers. Highly recommended.</p>
+        <div class="user-info">
+          <div class="avatar brown">C</div>
+          <div><strong>Che H.</strong><br><small>11 months ago</small></div>
+        </div>
+      </article>
+    </div>
+
+    <button class="slider-btn" id="nextBtn" aria-label="Next">›</button>
   </div>
 </section>
 
-<section class="testimonials-pro" id="testimonials">
 
-  <div class="testi-container">
-    <h2>What Our Clients Say</h2>
-    <p class="subtitle">Trusted by startups, companies and global brands</p>
 
-    <div class="testi-slider">
-      <div class="testi-track" id="testiTrack">
 
-        <div class="testi-card">
-          <div class="client-info">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg">
-            <div>
-              <h4>Rahul Sharma</h4>
-              <span>Founder, PixelTech</span>
-            </div>
-          </div>
-          <div class="stars">★★★★★</div>
-          <p>“Exceptional service and very professional team. Our website performance improved massively.”</p>
-        </div>
-
-        <div class="testi-card">
-          <div class="client-info">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg">
-            <div>
-              <h4>Anjali Verma</h4>
-              <span>CEO, StartupLabs</span>
-            </div>
-          </div>
-          <div class="stars">★★★★★</div>
-          <p>“They delivered a premium quality app with stunning UI. Highly recommended company.”</p>
-        </div>
-
-        <div class="testi-card">
-          <div class="client-info">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg">
-            <div>
-              <h4>Amit Patel</h4>
-              <span>Marketing Head, Growthify</span>
-            </div>
-          </div>
-          <div class="stars">★★★★★</div>
-          <p>“Very reliable team. Great communication and excellent technical expertise.”</p>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="testi-controls">
-      <button onclick="prevTestimonial()">‹</button>
-      <button onclick="nextTestimonial()">›</button>
-    </div>
-
-  </div>
-
-</section>
 
 
 <section class="contact-pro" id="contact">
@@ -406,7 +380,7 @@ document.querySelector('.mobile-nav-toggle').onclick = function () {
     <div class="contact-left">
       <h2>Contact Us</h2>
       <p>Send us a message and we’ll respond quickly.</p>
-      <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e" alt="Contact">
+      <img src="5143151.jpg" alt="Contact">
     </div>
 
     <div class="contact-right">

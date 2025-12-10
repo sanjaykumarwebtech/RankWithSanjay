@@ -22,6 +22,10 @@ function toggleMenu() {
 }
 
 
+
+
+
+
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".carousel-dots span");
@@ -50,6 +54,9 @@ function setSlide(index){
 
 setInterval(nextSlide, 4000);
 showSlide(0);
+
+
+
 
 
 
@@ -229,5 +236,57 @@ whyItems.forEach(item => {
   item.style.transition = "0.6s ease";
   whyObserver.observe(item);
 });
+
+
+
+
+// responsive slider controls + swipe support
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('sliderTrack');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+
+  function getScrollAmount() {
+    const card = track.querySelector('.testimonial-card');
+    if (!card) return Math.round(window.innerWidth * 0.86);
+    const style = window.getComputedStyle(track);
+    const gap = parseFloat(style.gap || 16);
+    return Math.round(card.offsetWidth + gap);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  // pointer drag / swipe
+  let isDown=false, startX, scrollLeft;
+  track.addEventListener('pointerdown', (e) => {
+    isDown = true;
+    startX = e.clientX;
+    scrollLeft = track.scrollLeft;
+    track.setPointerCapture?.(e.pointerId);
+  });
+  track.addEventListener('pointermove', (e) => {
+    if(!isDown) return;
+    const x = e.clientX;
+    const walk = startX - x;
+    track.scrollLeft = scrollLeft + walk;
+  });
+  ['pointerup','pointercancel','pointerleave'].forEach(ev => {
+    track.addEventListener(ev, (e) => {
+      isDown = false;
+      try { track.releasePointerCapture?.(e.pointerId); } catch(_) {}
+    });
+  });
+
+  // ensure arrows clickable if parent styles change
+  const slider = document.querySelector('.testimonial-slider');
+  if (slider) slider.style.position = slider.style.position || 'relative';
+});
+
+
 
 
