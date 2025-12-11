@@ -335,7 +335,8 @@ nav ul li a {
 
 @media (max-width: 768px) {
   .nav-container {
-    position: relative; /* add this */
+    position: relative;
+    height: 70px; 
   }
 
   .menu-btn {
