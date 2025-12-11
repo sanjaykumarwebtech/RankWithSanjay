@@ -57,6 +57,11 @@ showSlide(0);
 
 
 
+<script>
+document.querySelector('.mobile-nav-toggle').onclick = function () {
+    document.body.classList.toggle('mobile-nav-active');
+}
+</script>
 
 
 
