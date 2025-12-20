@@ -307,36 +307,11 @@ nav ul li a {
    
 }
 
-/* @media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  nav ul {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    background: white;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    padding: 10px 0;
-  }
-} */
 
 @media (max-width: 768px) {
   .nav-container {
     position: relative;
-    height: 70px; 
+    height: 50px; 
   }
 
   .menu-btn {
@@ -347,6 +322,7 @@ nav ul li a {
     z-index: 1000;      /* menu ke upar rahe */
   }
 
+  
   nav ul {
     position: absolute;
     top: 65px;
@@ -366,6 +342,12 @@ nav ul li a {
     width: 100%;
     padding: 10px 0;
   }
+
+.logo {
+  margin-top: 20px;
+
+}
+  
 }
 
 
