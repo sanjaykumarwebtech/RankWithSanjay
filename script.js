@@ -295,3 +295,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+  const infoCard = document.querySelector(".services-info");
+
+  const hhobserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        infoCard.classList.add("show");
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(infoCard);
+

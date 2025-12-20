@@ -318,7 +318,7 @@ nav ul li a {
     display: block;
     position: absolute; /* add this */
     right: 20px;        /* distance from right */
-    top: 15px;          /* distance from top */
+    top: 5px;          /* distance from top */
     z-index: 1000;      /* menu ke upar rahe */
   }
 
@@ -446,7 +446,7 @@ nav ul li a {
 
 .image-box {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
@@ -462,7 +462,7 @@ nav ul li a {
 
 .float-card {
   position: absolute;
-  background: white;
+  background: rgb(228, 236, 238);
   padding: 12px 18px;
   border-radius: 12px;
   font-weight: 600;
@@ -676,7 +676,7 @@ nav ul li a {
 }
 
 /* Left Dark Panel */
-.services-left {
+/* .services-left {
   background: linear-gradient(135deg, #0d47a1, #083b82);
   color: #fff;
   padding: 40px 30px;
@@ -708,198 +708,351 @@ nav ul li a {
 .services-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+} */
+
+
+
+.services-left {
+  max-width: 600px;
+  padding: 55px 45px;
+  background: linear-gradient(
+    135deg,
+    rgba(9, 58, 150, 0.95),
+    rgba(5, 20, 55, 0.95)
+  );
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  animation: serviceCardEntry 1.2s ease-out forwards;
+  transition: all 0.5s ease;
 }
 
-/* Right Cards */
+/* Glow border */
+.services-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1.5px;
+  background: linear-gradient(120deg, #3f8cff, #00e0ff, #ff9800);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.7;
+}
+
+/* Hover lift */
+.services-left:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.7);
+}
+
+/* Heading */
+.services-left h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+  animation: slideDown 1s ease forwards;
+}
+
+/* Text */
+.services-left p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #dbe6ff;
+  margin-bottom: 38px;
+  animation: fadeUp 1.3s ease forwards;
+}
+
+/* Button */
+.services-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff9800, #ff5c00);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 24px rgba(255, 153, 0, 0.7);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button shine */
+.services-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.7s;
+}
+
+.services-btn:hover::after {
+  left: 120%;
+}
+
+.services-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 42px rgba(255, 153, 0, 0.95);
+}
+
+/* Animations */
+@keyframes serviceCardEntry {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services-left {
+    padding: 40px 25px;
+  }
+
+  .services-left h2 {
+    font-size: 30px;
+  }
+
+  .services-left p {
+    font-size: 15px;
+  }
+}
+
+
+
+/* SECTION */
+.services-section {
+  padding: 80px 20px;
+  background: #f4f7fb;
+}
+
+/* WRAPPER */
+.services-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.services-section {
+  padding: 80px 20px;
+  background: #f4f7fb;
+  /* Subtle background gradient for depth */
+  background: linear-gradient(135deg, #f4f7fb 0%, #e0e7f1 100%);
+  /* Smooth fade-in on load */
+  animation: fadeInSection 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Fade in animation */
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+  }
+}
+
+/* WRAPPER */
+.services-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 40px;
+  align-items: stretch;
+  
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  
+  /* Slide up animation */
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: hover effect to brighten wrapper */
+.services-wrapper:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+
+
+
+
+/* LEFT PANEL */
+.services-info {
+  background: linear-gradient(180deg, #0f4cb8, #082a5e);
+  color: #fff;
+  padding: 45px 35px;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-info h2 {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.services-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #e5ecff;
+}
+
+.services-btn {
+  align-self: flex-start;
+  padding: 14px 32px;
+  border-radius: 40px;
+  background: #ff9800;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.services-btn:hover {
+  background: #ffb300;
+  transform: translateY(-2px);
+}
+
+/* GRID */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
+/* CARD */
 .service-card {
-  background: #f9fbff;
-  padding: 25px 20px;
-  border-radius: 18px;
+  background: linear-gradient(180deg, #1c5fd4, #0b2f66);
+  border-radius: 22px;
+  padding: 30px 22px;
   text-align: center;
-  box-shadow: 0 8px 30px rgba(13,71,161,0.08);
-  transition: 0.4s ease;
-}
-
-.service-card img {
-  width: 50px;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  font-size: 16px;
-  color: #0d47a1;
-  margin-bottom: 8px;
-}
-
-.service-card p {
-  font-size: 13px;
-  color: #555;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 230px;
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(13,71,161,0.2);
+  transform: translateY(-6px);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .services-container {
+.service-card img {
+  width: 52px;
+  margin: 0 auto 16px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #dce6ff;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .services-wrapper {
     grid-template-columns: 1fr;
   }
 
   .services-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* ===== Mobile Optimisation for Services Section ===== */
-@media (max-width: 768px) {
-
+/* MOBILE */
+@media (max-width: 576px) {
   .services-section {
     padding: 50px 15px;
   }
 
-  .services-container {
-    grid-template-columns: 1fr;
-    padding: 15px;
-    gap: 20px;
-  }
-
-  .services-left {
-    padding: 30px 20px;
+  .services-info {
     text-align: center;
-  }
-
-  .services-left h2 {
-    font-size: 24px;
-  }
-
-  .services-left p {
-    font-size: 15px;
   }
 
   .services-btn {
-    width: 100%;
-    text-align: center;
+    align-self: center;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .service-card {
-    padding: 20px 16px;
-  }
-
-  .service-card h3 {
-    font-size: 16px;
-  }
-
-  .service-card p {
-    font-size: 14px;
-  }
-
-  .service-card img {
-    width: 45px;
   }
 }
 
-@media (max-width: 480px) {
 
-  .services-left h2 {
-    font-size: 22px;
-  }
 
-  .services-left p {
-    font-size: 14px;
-  }
 
-  .service-card {
-    border-radius: 14px;
-  }
-}
-/* ===== Mobile Optimisation for Services Section ===== */
-@media (max-width: 768px) {
 
-  .services-section {
-    padding: 50px 15px;
-  }
 
-  .services-container {
-    grid-template-columns: 1fr;
-    padding: 15px;
-    gap: 20px;
-  }
 
-  .services-left {
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .services-left h2 {
-    font-size: 24px;
-  }
-
-  .services-left p {
-    font-size: 15px;
-  }
-
-  .services-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .service-card {
-    padding: 20px 16px;
-  }
-
-  .service-card h3 {
-    font-size: 16px;
-  }
-
-  .service-card p {
-    font-size: 14px;
-  }
-
-  .service-card img {
-    width: 45px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .services-left h2 {
-    font-size: 22px;
-  }
-
-  .services-left p {
-    font-size: 14px;
-  }
-
-  .service-card {
-    border-radius: 14px;
-  }
-}
 
 
 
@@ -973,7 +1126,7 @@ nav ul li a {
 /* Center Image */
 .why-image img {
   width: 100%;
-  max-width: 240px;
+  max-width: 540px;
   margin: auto;
   border-radius: 18px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
