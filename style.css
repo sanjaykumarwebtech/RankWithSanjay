@@ -312,14 +312,14 @@ nav ul li a {
 @media (max-width: 768px) {
   .nav-container {
     position: relative;
-    height: 50px; 
+    height: 70px; 
   }
 
   .menu-btn {
     display: block;
     position: absolute; /* add this */
     right: 20px;        /* distance from right */
-    top: 5px;          /* distance from top */
+    top: 15px;          /* distance from top */
     z-index: 1000;      /* menu ke upar rahe */
   }
 
@@ -350,6 +350,8 @@ nav ul li a {
 }
   
 }
+
+
 
 
 
