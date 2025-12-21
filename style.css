@@ -176,8 +176,11 @@ nav ul li a:hover::after {
     display: flex;
     position: absolute;
     right: 20px;
-    top: 15px;
+    top: 20px;
     z-index: 1100;
+  }
+  .nav-container .logo  {
+    margin-top: 20px;
   }
 
   nav ul {
@@ -278,13 +281,14 @@ nav ul li a:hover::after {
 }
 
 .btn.primary {
-  background: #0d47a1;
-  color: white;
+ 
+  background: #6dccd3;
+  color: #333;
 }
 
 .btn.secondary {
-  background: #f1f1f1;
-  color: #333;
+  background: #4997bb;
+  color: white;
 }
 
 .hero-stats {
