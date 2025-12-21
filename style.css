@@ -270,6 +270,10 @@ nav ul li a:hover::after {
   display: flex;
   gap: 12px;
   margin-bottom: 30px;
+  a{
+  text-decoration: none;
+}
+
 }
 
 .btn {
