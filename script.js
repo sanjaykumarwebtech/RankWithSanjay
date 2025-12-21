@@ -1,93 +1,79 @@
- function toggleMenu() {
-    document.getElementById('menu').classList.toggle('show');
+/* ================= HEADER & MENU ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      menu.classList.toggle("show");
+    });
   }
 
-  // Scroll Animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
+  const servicesToggle = document.querySelector(".services-toggle");
+
+  if (servicesToggle) {
+    const dropdown = servicesToggle.closest(".dropdown");
+
+    servicesToggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.classList.toggle("open");
       }
     });
+  }
+
+});
+
+
+
+
+
+
+
+/* ================= SCROLL ANIMATIONS ================= */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
   });
+});
 
-  document.querySelectorAll('.service-card, .why-box, .testimonial-card')
-    .forEach(el => observer.observe(el));
+document.querySelectorAll('.service-card, .why-box, .testimonial-card')
+  .forEach(el => observer.observe(el));
 
-
-  
-function toggleMenu() {
-  document.getElementById('menu').classList.toggle('show');
-}
-
-
-
-
-
-
+/* ================= SLIDER ================= */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".carousel-dots span");
 
-function showSlide(index){
+function showSlide(index) {
   slides.forEach(s => s.classList.remove("active"));
   dots.forEach(d => d.classList.remove("active"));
   slides[index].classList.add("active");
   dots[index].classList.add("active");
 }
 
-function nextSlide(){
+function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-function prevSlide(){
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-function setSlide(index){
-  currentSlide = index;
   showSlide(currentSlide);
 }
 
 setInterval(nextSlide, 4000);
 showSlide(0);
 
-
-
-
-document.querySelector('.mobile-nav-toggle').onclick = function () {
-    document.body.classList.toggle('mobile-nav-active');
-}
-
-
-
-
-// const cards = document.querySelectorAll('.service-card');
-
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if(entry.isIntersecting) {
-//       entry.target.style.opacity = 1;
-//       entry.target.style.transform = "translateY(0)";
-//     }
-//   });
-// });
-
-// cards.forEach(card => observer.observe(card));
-
-
-// Counter animation
+/* ================= COUNTER ================= */
 const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
   const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
+    const target = +counter.dataset.target;
     const count = +counter.innerText;
-    const speed = 30;
-    const increment = target / speed;
+    const increment = target / 30;
 
     if (count < target) {
       counter.innerText = Math.ceil(count + increment);
@@ -99,151 +85,44 @@ counters.forEach(counter => {
   updateCount();
 });
 
-// Fade-in cards
-const whyCards = document.querySelectorAll('.why-card');
-const whyObserver = new IntersectionObserver(entries => {
-  entries.forEach((entry, index) => {
-    if(entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }, index * 150);
-    }
-  });
-});
-
-whyCards.forEach(card => whyObserver.observe(card));
-
-
-
-
+/* ================= TESTIMONIAL ================= */
 let testiIndex = 0;
 
-function showTestimonial(){
+function showTestimonial() {
   const track = document.getElementById("testiTrack");
   const total = document.querySelectorAll(".testi-card").length;
-
-  if(testiIndex < 0) testiIndex = total - 1;
-  if(testiIndex >= total) testiIndex = 0;
-
+  testiIndex = (testiIndex + total) % total;
   track.style.transform = `translateX(-${testiIndex * 100}%)`;
 }
 
-function nextTestimonial() {
+setInterval(() => {
   testiIndex++;
   showTestimonial();
-}
+}, 6000);
 
-function prevTestimonial() {
-  testiIndex--;
-  showTestimonial();
-}
-
-setInterval(nextTestimonial, 6000);
-
-
-
-const form = document.getElementById("contactForm");
-const status = document.getElementById("formStatus");
-
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      status.innerHTML = "✅ Message sent successfully!";
-      form.reset();
-    } else {
-      status.innerHTML = "❌ Something went wrong. Try again.";
-    }
-  } catch (error) {
-    status.innerHTML = "❌ Network error. Please try later.";
-  }
-});
-
-
-
-
-
+/* ================= FOOTER & UI ================= */
 document.getElementById("year").innerText = new Date().getFullYear();
 
-document.getElementById("topBtn").addEventListener("click", function(){
+document.getElementById("topBtn")?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-document.getElementById("newsletterForm").addEventListener("submit", function(e){
+document.getElementById("newsletterForm")?.addEventListener("submit", e => {
   e.preventDefault();
-  document.getElementById("newsletterStatus").innerText = "✅ Subscribed successfully!";
+  document.getElementById("newsletterStatus").innerText =
+    "✅ Subscribed successfully!";
 });
 
 
-
-const serviceCards = document.querySelectorAll(".service-card");
-
-const oubserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.transform = "translateY(0)";
-      entry.target.style.opacity = "1";
-    }
-  });
-});
-
-serviceCards.forEach(card => {
-  card.style.transform = "translateY(30px)";
-  card.style.opacity = "0";
-  card.style.transition = "0.6s ease";
-  observer.observe(card);
-});
-
-
-
-
-
-
-// Simple animation effect
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".float-card");
+  const toggle = document.querySelector(".services-toggle");
 
-  cards.forEach((card, i) => {
-    card.style.transform = "scale(0.9)";
-    setTimeout(() => {
-      card.style.transform = "scale(1)";
-      card.style.transition = "0.5s ease";
-    }, 300 * i);
-  });
-});
+  if (!toggle) return;
 
-
-
-
-const whyItems = document.querySelectorAll('.why-item');
-
-const whyOobserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
+  toggle.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      toggle.parentElement.classList.toggle("open");
     }
   });
 });
-
-whyItems.forEach(item => {
-  item.style.opacity = "0";
-  item.style.transform = "translateY(30px)";
-  item.style.transition = "0.6s ease";
-  whyObserver.observe(item);
-});
-
-
-
-
-
 

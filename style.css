@@ -353,7 +353,167 @@ nav ul li a {
 
 
 
+/* HAMBURGER ICON */
+.menu-btn {
+  width: 30px;
+  height: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 8px;
+}
 
+.menu-btn span {
+  display: block;
+  height: 7px;
+  background: #948f8f;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* CROSS STATE */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE MENU SLIDE */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  nav ul.show {
+    max-height: 500px;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+}
+
+
+
+/* MOBILE SERVICES CLICK DROPDOWN */
+@media (max-width: 768px) {
+
+  /* pehle hide */
+  .dropdown-menu {
+    display: none;
+    width: 100%;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* click par open */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  /* mobile me hover disable */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* MOBILE: hover disable */
+  .dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  /* MOBILE: default hide */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* MOBILE: click open */
+  .dropdown.open > .dropdown-menu {
+    display: block !important;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* MOBILE MENU OPEN */
+  #menu.show {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* MOBILE: hover completely disable */
+  .dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  /* MOBILE: dropdown default hidden */
+  .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  /* MOBILE: JS click se open */
+  .dropdown.open > .dropdown-menu {
+    display: block !important;
+  }
+}
+
+
+/* ===== FINAL MOBILE SERVICES FIX ===== */
+@media (max-width: 768px) {
+
+  /* desktop hover disable */
+  .dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  /* mobile default hide */
+  nav ul.show .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    box-shadow: none !important;
+    width: 100%;
+  }
+
+  /* mobile click open */
+  nav ul.show .dropdown.open > .dropdown-menu {
+    display: block !important;
+  }
+}
 
 
 
@@ -1618,3 +1778,72 @@ button:hover {
         display: block;
       }
     }
+
+
+
+
+
+    /* ===== FORCE MOBILE SERVICES DROPDOWN ===== */
+@media (max-width: 768px) {
+
+  .services-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+
+  /* disable hover completely */
+  .dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  /* always hide first */
+  .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    width: 100%;
+    box-shadow: none !important;
+  }
+
+  /* ONLY JS open */
+  .dropdown.open .dropdown-menu {
+    display: block !important;
+  }
+}
+
+/* ========= FINAL MOBILE SERVICES FIX ========= */
+@media (max-width: 768px) {
+
+  /* disable hover fully on mobile */
+  nav ul li.dropdown:hover > .dropdown-menu {
+    display: none !important;
+  }
+
+  /* default hidden */
+  nav ul li.dropdown > .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    width: 100%;
+    box-shadow: none !important;
+  }
+
+  /* JS controlled open */
+  nav ul li.dropdown.open > .dropdown-menu {
+    display: block !important;
+  }
+
+  .services-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+}
+
