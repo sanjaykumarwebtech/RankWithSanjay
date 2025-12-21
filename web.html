@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="U1bGRJKXtcYgxqLXw-aeOLPj-3dPlV2JS1vjTAfMF24" />
 <link rel="canonical" href="https://www.rankwithsanjay.tech/" />
@@ -39,7 +38,7 @@
 <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"
 
 
 
@@ -186,26 +185,381 @@
 }
 </script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+  <style>
+    .webdev-hero {
+  background: linear-gradient(135deg,#0d47a1,#00bcd4);
+  color: #fff;
+  padding: 90px 20px;
+}
+
+.webdev-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.webdev-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.webdev-content p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #0d47a1;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.webdev-image img {
+  width: 100%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* SERVICES */
+.webdev-services {
+  padding: 80px 20px;
+  background: #f4f7fb;
+  text-align: center;
+  color: black;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: rgba(44, 204, 204, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+  color: black;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* WHY US */
+.why-webdev {
+  padding: 80px 20px;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* CTA */
+.webdev-cta {
+  background: linear-gradient(135deg,#00bcd4,#0d47a1);
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.webdev-cta a {
+  background: #fff;
+  color: #0d47a1;
+  padding: 14px 30px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-15px);}
+  100% {transform: translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .webdev-container,
+  .why-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+}
+
+
+/* web development  */
+
+/* ===== WHY CHOOSE US – PREMIUM LOOK ===== */
+.why-webdev{
+  padding: 100px 20px;
+  background:
+    radial-gradient(circle at top left, rgba(0,188,212,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(13,71,161,0.18), transparent 45%),
+    #f7fbff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.why-container{
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ===== IMAGE CARD ===== */
+.why-image{
+  position: relative;
+}
+
+.why-image img{
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0 35px 70px rgba(13,71,161,0.25);
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+/* Floating glow */
+.why-image::after{
+  content:"";
+  position:absolute;
+  inset:-10px;
+  border-radius:30px;
+  background: linear-gradient(135deg,#00bcd4,#0d47a1);
+  opacity:0.25;
+  filter: blur(40px);
+  z-index:-1;
+}
+
+/* ===== CONTENT GLASS CARD ===== */
+.why-content{
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 50px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.why-content h2{
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  
+ 
+}
+
+/* ===== LIST ===== */
+.why-content ul{
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 40px;
+}
+
+.why-content ul li{
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 18px;
+  padding-left: 48px;
+  position: relative;
+  font-weight: 500;
+}
+
+/* Animated check */
+.why-content ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  top:0;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg,#00bcd4,#0d47a1);
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  box-shadow: 0 8px 18px rgba(0,188,212,0.5);
+  animation: pulseCheck 2.5s infinite;
+}
+
+/* Button */
+.why-content .btn-primary{
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(13,71,161,0.35);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes floatImg{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes pulseCheck{
+  0%{transform:scale(1); opacity:1;}
+  50%{transform:scale(1.15); opacity:0.85;}
+  100%{transform:scale(1);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:991px){
+  .why-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .why-content{
+    padding:40px 30px;
+  }
+
+  .why-content ul li{
+    padding-left:0;
+  }
+
+  .why-content ul li::before{
+    position:static;
+    margin:0 auto 8px;
+  }
+}
+
+@media(max-width:576px){
+  .why-webdev{
+    padding:70px 15px;
+  }
+
+  .why-content h2{
+    font-size:28px;
+  }
+
+  .why-content{
+    padding:30px 20px;
+  }
+
+  .why-content ul li{
+    font-size:16px;
+  }
+}
+
+
+/* ===== DESKTOP PERFECT BALANCE ===== */
+@media (min-width: 1024px){
+
+  .why-webdev{
+    padding: 120px 20px;
+  }
+
+  .why-container{
+    align-items: stretch;
+  }
+
+  /* IMAGE COLUMN */
+  .why-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-image img{
+    max-width: 520px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+  }
+
+  /* CONTENT COLUMN */
+  .why-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+  }
+
+  .why-content h2{
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  .why-content ul{
+    max-width: 520px;
+  }
+
+  .why-content ul li{
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+
+  /* BUTTON ALIGNMENT */
+  .why-content .btn-primary{
+    align-self: flex-start;
+  }
+
+  /* HOVER POLISH (Desktop only) */
+  .why-content:hover{
+    transform: translateY(-6px);
+    transition: 0.4s ease;
+  }
+}
+
+
+
+
+
+
+
+/* web development  */
+
+
+
+
+  </style>
 </head>
 
-
-
-
-    <body><!-- class="disable-select" oncopy="return false" oncut="return false" onpaste="return false" -->
-
-    
-
-
-
-
-
-
-
-
-
-
-    
-    <header class="main-header">
+   <header class="main-header">
   <div class="nav-container">
 
     <!-- Logo -->
@@ -227,11 +581,11 @@
         <li><a href="#">Home</a></li>
         <li class="dropdown" >
          
-            <a  href="#services" class="services-toggle"  type="button">
+            <a  href="index.html#services" class="services-toggle"  type="button">
     Services
             </a>
           <ul class="dropdown-menu">
-            <li><a href="#web.html">Web Development</a></li>
+            <li><a href="index.html#services">Web Development</a></li>
             <li><a href="#services">App Development</a></li>
             <li><a href="#services">SEO Services</a></li>
             <li><a href="#services">UI/UX Design</a></li>
@@ -246,228 +600,93 @@
 </header>
 
 
+</head>
+<body>
+  
 
-<section class="hero">
-  <div class="hero-left">
-    <span class="badge">SEO & Web Solutions</span>
-
-    <h1>Smart IT Services for <span>Smarter Growth.</span></h1>
-
-    <p>
-     Rank With Sanjay delivers high-performing websites and digital marketing solutions. Recognized as the Best Web Development, Digital Marketing, and SEO Company in India, we drive faster business growth.
-    </p>
-
-    <div class="hero-buttons">
-    
-      <a href="#contact" class="btn secondary">Get Started</a>
-       <a href="#contact" class="btn secondary">Watch Video</a>
-    </div>
-
-    <div class="hero-stats">
-      <div>
-        <h3>100+</h3>
-        <p>Happy Clients</p>
-      </div>
-      
-      <div>
-        <h3>2+</h3>
-        <p>Years Experience</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-
-    <!-- Main Image -->
-    <div class="image-box">
-      <img src="ChatGPT Image Dec 17, 2025, 09_21_54 PM.png" alt="Hero Mockup">
-    </div>
-
-    <!-- Floating Cards -->
-    <div class="float-card top-card">
-      100+ Projects
-    </div>
-
-    <div class="float-card bottom-card">
-      ⭐ 4.9 Rating
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-  <div class="services-wrapper">
-
-    <!-- LEFT CONTENT -->
-    <div class="services-info" id="services">
-      <h2>Our Services</h2>
+<!-- WEB DEVELOPMENT PAGE -->
+<section class="webdev-hero">
+  <div class="webdev-container">
+    <div class="webdev-content">
+      <h1>Web Development That Works for Your Brand.</h1>
       <p>
-        Rank With Sanjay offers top website development, digital marketing, and SEO services, helping businesses grow with powerful digital solutions in India.
+        Rank With Sanjay builds high-performance, mobile-responsive and SEO-optimized
+        websites that convert visitors into customers.
       </p>
-      <a href="web.html" class="services-btn">Explore All Services</a>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get Free Quote</a>
+        <a href="tel:+917837660517" class="btn-outline">Call Now</a>
+      </div>
     </div>
 
-    <!-- RIGHT CARDS -->
-    <div class="services-grid">
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/128/7991/7991055.png">
-        <h3>Web Development</h3>
-        <p>High-performance, scalable websites.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/128/1968/1968666.png">
-        <h3>Digital Marketing</h3>
-        <p>Growth-driven online marketing strategies.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/128/2779/2779775.png">
-        <h3>Graphic Designing</h3>
-        <p>Creative designs that build brand identity.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721276.png">
-        <h3>Logo Designing</h3>
-        <p>Professional logos for powerful branding.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png">
-        <h3>Web Designing</h3>
-        <p>Modern UI/UX focused web designs.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/9743/9743868.png">
-        <h3>SEO Services</h3>
-        <p>Rank, remember, grow with smart SEO.</p>
-      </div>
-
+    <div class="webdev-image">
+      <img src="https://media.istockphoto.com/id/2210688897/photo/ux-ui-design-web-and-application-user-design-concepts-web-design-application-design-user.webp?a=1&b=1&s=612x612&w=0&k=20&c=3vTDBUL24n5mH1Hpu3kf9uVqjItR6a2lboOWV_VFQlE=" alt="Web Development Mockup">
     </div>
-
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="webdev-services" id="servicess">
+  <h2>Our Web Development Services</h2>
 
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+      <h3>Website Development</h3>
+      <p>Fast, responsive and SEO-friendly websites for all businesses.</p>
+    </div>
 
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png">
+      <h3>E-Commerce Development</h3>
+      <p>Online stores with payment gateway & conversion-focused design.</p>
+    </div>
 
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png">
+      <h3>UI / UX Design</h3>
+      <p>Modern UI designs that deliver smooth user experience.</p>
+    </div>
 
-<section class="why-choose-us" id="whyus">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919832.png">
+      <h3>Custom Web Apps</h3>
+      <p>Advanced web applications built with latest technologies.</p>
+    </div>
+  </div>
+</section>
 
+<!-- WHY CHOOSE US -->
+<section class="why-webdev">
   <div class="why-container">
-
-    <h2>Why Choose Us?</h2>
-    <p class="why-subtitle">
-      Rank With Sanjay stands out as a trusted leader in web development, digital marketing, and SEO services across India. Our dedicated team employs advanced strategies to enhance your digital presence and drive sustainable growth with customized, transparent, and effective solutions.
-    </p>
+    <div class="why-image">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=900">
+    </div>
 
     <div class="why-content">
+      <h2>Why Choose Rank With Sanjay?</h2>
+      <ul>
+        <li>✔ SEO Optimized Development</li>
+        <li>✔ 100% Mobile Responsive</li>
+        <li>✔ Fast Loading Speed</li>
+        <li>✔ Affordable Pricing</li>
+        <li>✔ Support & Maintenance</li>
+      </ul>
 
-      <!-- Left Features -->
-      <div class="why-left">
-        <div class="why-item">
-          <div class="why-icon">🚀</div>
-          <h4>Expert Team</h4>
-          <p>Skilled professionals delivering best results.</p>
-        </div>
-
-        <div class="why-item">
-          <div class="why-icon">⚡</div>
-          <h4>Fast Turnaround</h4>
-          <p>Quick project delivery without compromising quality.</p>
-        </div>
-      </div>
-
-      <!-- Center Image -->
-      <div class="why-image">
-        <img src="https://img.freepik.com/free-photo/business-man-holding-paper-with-why-choose-us-question_23-2148932315.jpg" alt="Why Choose Us">
-      </div>
-
-      <!-- Right Features -->
-      <div class="why-right">
-        <div class="why-item">
-          <div class="why-icon">💼</div>
-          <h4>Affordable Pricing</h4>
-          <p>Premium quality services at the best prices.</p>
-        </div>
-
-        <div class="why-item">
-          <div class="why-icon">🛠</div>
-          <h4>All-in-One Services</h4>
-          <p>Complete IT solutions under one roof.</p>
-        </div>
-      </div>
-
+      <a href="#contact" class="btn-primary">Start Your Project</a>
     </div>
-
-    <a href="#contact" class="why-btn">Contact Us</a>
-
   </div>
+</section>
 
+<!-- CTA -->
+<section class="webdev-cta">
+  <h2>Need a Professional Website?</h2>
+  <p>Get your business online with Rank With Sanjay</p>
+  <a href="#contact">Request Free Consultation</a>
 </section>
 
 
-
-<section class="testimonials-section" id="reviews">
-  <div class="testimonials-header">
-    <div class="google-rating">
-      Google Rating
-      <div class="stars">⭐⭐⭐⭐⭐ <span class="score">5.0</span> <span class="count">(55)</span></div>
-    </div>
-    <a href="#" class="write-review-btn">Write a review</a>
-  </div>
-
-  <div class="testimonial-slider" aria-label="Testimonials carousel">
-    <button class="slider-btn" id="prevBtn" aria-label="Previous">‹</button>
-
-    <div class="testimonial-track" id="sliderTrack" role="list">
-      <!-- Sample card -->
-      <article class="testimonial-card" role="listitem">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>I feel so empowered whenever I come to the gym. Great environment and support.</p>
-        <div class="user-info">
-          <div class="avatar">M</div>
-          <div><strong>Mikhail J.</strong><br><small>4 months ago</small></div>
-        </div>
-      </article>
-
-      <article class="testimonial-card" role="listitem">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>A really great gym with awesome instructors who are always supportive.</p>
-        <div class="user-info">
-          <div class="avatar red">M</div>
-          <div><strong>Melanie G.</strong><br><small>6 months ago</small></div>
-        </div>
-      </article>
-
-      <article class="testimonial-card" role="listitem">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>I started the winter warrior challenge and it has been amazing so far.</p>
-        <div class="user-info">
-          <div class="avatar purple">H</div>
-          <div><strong>Hayley S.</strong><br><small>11 months ago</small></div>
-        </div>
-      </article>
-
-      <article class="testimonial-card" role="listitem">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Great training with the best trainers. Highly recommended.</p>
-        <div class="user-info">
-          <div class="avatar brown">C</div>
-          <div><strong>Che H.</strong><br><small>11 months ago</small></div>
-        </div>
-      </article>
-    </div>
-
-    <button class="slider-btn" id="nextBtn" aria-label="Next">›</button>
-  </div>
-</section>
 
 
 
@@ -669,7 +888,10 @@
  
 </script>
  <script src="script.js"></script>
+
+
+
+
+
 </body>
-
-
 </html>
