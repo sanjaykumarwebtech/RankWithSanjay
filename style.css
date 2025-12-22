@@ -1484,186 +1484,59 @@ button:hover {
 
 
 
-/* 1. Desktop floating icons */
-.desktop-floating-icons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.desktop-floating-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: #007BFF; /* Default call color */
-  transition: background-color 0.3s ease;
-}
-
-.desktop-floating-icons a.whatsapp-icon {
-  background-color: #25D366;
-}
-
-.desktop-floating-icons a:hover {
-  filter: brightness(0.85);
-}
-
-/* 2. Mobile bottom navigation */
-.mobile-bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px -2px 10px rgba(0,0,0,0.1);
-  display: none; /* Hidden by default */
-  justify-content: space-around;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.mobile-bottom-nav .nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 12px;
-  font-family: sans-serif;
-}
-
-.mobile-bottom-nav .nav-item i {
-  font-size: 22px;
-  margin-bottom: 5px;
-  color: #2e4fbd; /* Pinkish color */
-}
-
-.mobile-bottom-nav .nav-item span {
-  font-weight: 500;
-}
-
-/* 3. Media Query - toggle visibility */
-@media screen and (max-width: 768px) {
-  .desktop-floating-icons {
-    display: none !important;
-  }
-  .mobile-bottom-nav {
-    display: flex !important;
-  }
-  body {
-    padding-bottom: 70px; /* To avoid content hidden behind nav */
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .desktop-floating-icons {
-    display: flex !important;
-  }
-  .mobile-bottom-nav {
-    display: none !important;
-  }
-  body {
-    padding-bottom: 0;
-  }
-}
-/* 1. Desktop floating icons */
-.desktop-floating-icons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.desktop-floating-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: #007BFF; /* Default call color */
-  transition: background-color 0.3s ease;
-}
-
-.desktop-floating-icons a.whatsapp-icon {
-  background-color: #25D366;
-}
-
-.desktop-floating-icons a:hover {
-  filter: brightness(0.85);
-}
-
-/* 2. Mobile bottom navigation */
-.mobile-bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px -2px 10px rgba(0,0,0,0.1);
-  display: none; /* Hidden by default */
-  justify-content: space-around;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.mobile-bottom-nav .nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 12px;
-  font-family: sans-serif;
-}
-
-.mobile-bottom-nav .nav-item i {
-  font-size: 22px;
-  margin-bottom: 5px;
-  color: #3466c4; /* Pinkish color */
-}
-
-.mobile-bottom-nav .nav-item span {
-  font-weight: 500;
-}
-
-/* 3. Media Query - toggle visibility */
-@media screen and (max-width: 768px) {
-  .desktop-floating-icons {
-    display: none !important;
-  }
-  .mobile-bottom-nav {
-    display: flex !important;
-  }
-  body {
-    padding-bottom: 70px; /* To avoid content hidden behind nav */
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .desktop-floating-icons {
-    display: flex !important;
-  }
-  .mobile-bottom-nav {
-    display: none !important;
-  }
-  body {
-    padding-bottom: 0;
-  }
-}
 
 
    
+/* BOTTOM NAV – MOBILE + DESKTOP */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0d47a1, #6ab9c4);
+ 
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+.mobile-bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #f8f2f2;
+  font-size: 12px;
+}
+
+.mobile-bottom-nav .nav-item i {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #eff1f5;
+}
+
+.mobile-bottom-nav .nav-item span {
+  font-weight: 500;
+}
+
+/* DESKTOP FLOATING ICONS – OPTIONAL */
+@media (max-width: 768px) {
+  .desktop-floating-icons {
+    display: none !important;
+  }
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+/* DESKTOP CENTER LOOK (OPTIONAL) */
+@media (min-width: 992px) {
+  .mobile-bottom-nav {
+    max-width: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0 0;
+  }
+}
