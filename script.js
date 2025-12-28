@@ -12,18 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const servicesToggle = document.querySelector(".services-toggle");
+  // const servicesToggle = document.querySelector(".services-toggle");
 
-  if (servicesToggle) {
-    const dropdown = servicesToggle.closest(".dropdown");
+  // if (servicesToggle) {
+  //   const dropdown = servicesToggle.closest(".dropdown");
 
-    servicesToggle.addEventListener("click", function (e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdown.classList.toggle("open");
-      }
-    });
-  }
+  //   servicesToggle.addEventListener("click", function (e) {
+  //     if (window.innerWidth <= 768) {
+  //       e.preventDefault();
+  //       dropdown.classList.toggle("open");
+  //     }
+  //   });
+  // }
 
 });
 
