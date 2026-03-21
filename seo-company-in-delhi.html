@@ -101,7 +101,7 @@ position:relative
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#f8f9fb;color:#222;line-height:1.7}
 .container{max-width:1140px;margin:auto;padding:40px 20px}
-.seo-hero{background:linear-gradient(135deg,#0d6efd,#003c8f);color:#fff;padding:90px 20px;text-align:center}
+.seo-hero{background:linear-gradient(135deg,#0d6efd,#003c8f);color:#fff;text-align:center}
 .seo-hero h1{font-size:42px;font-weight:700;margin-bottom:15px}
 section{background:#fff;margin-bottom:35px;padding:35px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
 h2{font-size:26px;margin-bottom:20px;color:#0d6efd}
@@ -166,6 +166,49 @@ ul li{margin-bottom:12px;padding-left:10px;position:relative}
 </head>
 
 <body>
+
+<header class="main-header">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="logo"><img src="assets/large-Photoroom.png" alt="logo" width="300px"><span></span></div>
+
+    <!-- Mobile Menu Button -->
+    <!-- <div class="menu-btn" onclick="toggleMenu()">☰</div> -->
+      <!-- ✅ MENU TOGGLE BUTTON (YAHAN LAGAO) -->
+    <div class="menu-btn" id="menuBtn">
+      <span></span>
+
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown" >
+         
+            <a  href="index.html#services" class="services-toggle"  type="button">
+    Services 
+            </a>
+          <ul class="dropdown-menu">
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">App Development</a></li>
+            <li><a href="#services">SEO Services</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#whyus">Why Us</a></li>
+        <li><a href="index.html#reviews">Testimonials</a></li>
+        <li><a href="index.html#contact" class="nav-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
 
 <header class="seo-hero">
 <h1>SEO Company in Delhi</h1>
