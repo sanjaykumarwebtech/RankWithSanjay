@@ -1,12 +1,9 @@
 backend:
-  name: github
-  repo: rankwithsanjay/rankwithsanjay
+  name: git-gateway
   branch: main
 
-site_url: https://rankwithsanjay.tech
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
@@ -15,7 +12,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
