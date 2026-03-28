@@ -11,6 +11,25 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 />
+ <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+
+      window.netlifyIdentity.on("recovery", function() {
+        alert("Password reset link detected. Please set new password.");
+      });
+    }
+  </script>
+
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
